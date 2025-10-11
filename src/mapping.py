@@ -54,9 +54,7 @@ try:
         ),
     }
     st.sidebar.subheader("Map layers")
-    selected_layers = [
-        layer for layer_name, layer in all_layers.items() if st.sidebar.checkbox(layer_name, True)
-    ]
+    selected_layers = [layer for layer_name, layer in all_layers.items() if st.sidebar.checkbox(layer_name, True)]
     if selected_layers:
         st.pydeck_chart(
             pdk.Deck(
