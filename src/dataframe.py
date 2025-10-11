@@ -15,7 +15,9 @@ def get_un_data() -> pd.DataFrame:
 try:
     df = get_un_data()
     countries = st.multiselect(
-        "Choose countries", list(df.index), ["China", "United States of America"],
+        "Choose countries",
+        list(df.index),
+        ["China", "United States of America"],
     )
     if not countries:
         st.error("Please select at least one country.")
