@@ -1,5 +1,6 @@
-import streamlit as st
 import time
+
+import streamlit as st
 
 progress_bar = st.progress(0)
 for i in range(100):

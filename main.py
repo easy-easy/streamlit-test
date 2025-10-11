@@ -1,7 +1,24 @@
 import streamlit as st
 
-st.title("はじめてのStreamlitアプリ")
+st.set_page_config(
+    page_title="Streamlit Demo",
+    page_icon="👋",
+)
+
+st.title("👋 はじめてのStreamlitアプリ")
 st.write("Hello, World!")
+
+st.markdown(
+    """
+    このアプリには複数のデモページがあります。
+    左側のサイドバーからページを選択してください:
+    
+    - **DataFrame Demo**: データフレームとチャートの表示
+    - **Plotting Demo**: リアルタイムプロット
+    - **Mapping Demo**: 地理空間データの可視化
+    - **Animation Demo**: フラクタルアニメーション
+    """
+)
 
 
 def on_button_click():
