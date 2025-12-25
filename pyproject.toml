@@ -6,11 +6,13 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "mypy>=1.18.2",
+    "pandas>=2.3.3",
     "streamlit>=1.50.0",
 ]
 
 [dependency-groups]
 dev = [
+    "jupyter>=1.1.1",
     "pytest>=8.4.2",
     "ruff>=0.14.0",
     "taskipy>=1.14.1",
@@ -39,6 +41,8 @@ select = [
 ]
 ignore = [
     "D1",    # undocumented
+    "D2",    # docstring formatting (日本語対応)
+    "D4",    # docstring content (日本語対応)
     "D203",  # one blank line before class
     "D213",  # multi-line summary second line
     "TD001", # invalid todo tag
