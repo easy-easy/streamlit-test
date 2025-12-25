@@ -1,12 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-from src.sample1 import calc_interest, calc_interest_with_payment, render
-
-first_container = st.container(border=True)
-
-with first_container:
-    render()
+from src.sample1 import calc_interest_with_payment
 
 second_container = st.container()
 
@@ -23,7 +18,6 @@ with second_container:
 
     st.text("年利計算")
 
-    # ファイルがアップロードされた場合の処理
     df = pd.DataFrame(st.session_state.annual_balance).style.format("{:.2f}")
     # st.dataframe(df)
     st.dataframe(df, height=40 * years)
